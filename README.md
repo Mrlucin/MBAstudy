@@ -4,6 +4,14 @@
 
 为「基础不好、时间不多」的备考场景做的：每个知识点先讲人话，再给例题，再让你动手练，答错立刻告诉你**这一项为什么错**。
 
+## 界面一览
+
+<p align="center">
+  <img src="docs/screenshot.png" width="320" alt="首页截图">
+</p>
+
+<p align="center"><sub>首页：考前倒计时、今日单词进度、三科入口（手机视图）</sub></p>
+
 ## 内容规模
 
 | 板块 | 章节 | 讲解 | 公式卡 | 例题 | 练习 |
@@ -69,6 +77,7 @@ python -m http.server 8080
 ├── icon.ico              六尺寸图标（16–256，桌面快捷方式用）
 ├── favicon.ico
 ├── icon-192.png / icon-512.png / apple-touch-icon.png
+├── docs/screenshot.png   首页截图（README 用）
 └── README.md
 ```
 
