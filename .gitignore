@@ -15,3 +15,6 @@ package-lock.json
 _icon-wrap.html
 *.log
 *.tmp
+
+# 推送诊断日志
+push-log.txt
