@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f6f4ef">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="MBA 冲刺">
+<title>MBA 冲刺 · 管综 + 英语陪练</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div class="boot">
+    <div class="boot-dot"></div>
+    <p>正在准备今天的课…</p>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+
+<script src="data/math-1.js"></script>
+<script src="data/math-2.js"></script>
+<script src="data/logic-1.js"></script>
+<script src="data/logic-2.js"></script>
+<script src="data/english-1.js"></script>
+<script src="data/english-2.js"></script>
+<script src="data/words-1.js"></script>
+<script src="data/words-2.js"></script>
+<script src="data/words-3.js"></script>
+<script src="data/words-4.js"></script>
+<script src="data/words-5.js"></script>
+<script src="data/words-6.js"></script>
+<script src="data/memory.js"></script>
+<script src="data/why-1.js"></script>
+<script src="data/why-2.js"></script>
+<script src="data/why-3.js"></script>
+<script src="data/why-ex.js"></script>
+<script src="js/app.js"></script>
+<script>
+/* 启动自检：资源没加载出来时，别让用户对着转圈猜 */
+(function () {
+  function fail(reason) {
+    var app = document.getElementById('app');
+    if (!app) return;
+    app.innerHTML =
+      '<div style="max-width:520px;margin:0 auto;padding:64px 22px;line-height:1.75;' +
+      'font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;color:#1c1d1b;">' +
+      '<div style="font-size:26px;font-weight:800;margin-bottom:14px;">页面没加载完整</div>' +
+      '<p style="margin:0 0 14px;color:#4a4d48;">' + reason + '</p>' +
+      '<div style="background:#fdf3dd;border-radius:12px;padding:14px 16px;font-size:14px;color:#6b5310;">' +
+      '<b>怎么解决</b><br>1. 打开整个 <code>mba-study</code> 文件夹，不要只发 index.html；<br>' +
+      '2. 或者在电脑上跑一个本地服务，手机连同一个 Wi-Fi 访问；<br>' +
+      '3. 最简单：用我给你的在线地址，直接点开就能用。' +
+      '</div></div>';
+  }
+  setTimeout(function () {
+    var boot = document.querySelector('.boot');
+    if (!boot) return;
+    if (!window.MATH_CHAPTERS) fail('数据文件没有加载成功，所以没法开始。');
+    else if (!document.getElementById('page')) fail('主程序没跑起来，可能是脚本被拦截了。');
+    else fail('加载超时了，检查一下网络再刷新试试。');
+  }, 2500);
+  window.addEventListener('error', function (e) {
+    if (e && e.target && e.target.tagName === 'SCRIPT') {
+      fail('找不到文件：<code>' + (e.target.getAttribute('src') || '') + '</code>');
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>
