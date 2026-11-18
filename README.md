@@ -8,10 +8,9 @@
 
 ## 界面一览
 
-| 例题精讲 | 马上练手 | 背单词 | 考前必背 |
+| 首页 | 例题精讲 | 背单词 | 考前必背 |
 | :---: | :---: | :---: | :---: |
-| ![例题精讲](docs/scr-example.png) | ![马上练手](docs/scr-practice.png) | ![背单词](docs/scr-word.png) | ![考前必背](docs/scr-recite.png) |
-| 分步展开，每个选项说明为什么错 | 即时判分，选错立刻给出原因 | 遮住中文自测，950 词分两级 | 178 条硬知识，可展开、可标记 |
+| ![首页](docs/screenshot.png) | ![例题精讲](docs/scr-example.png) | ![背单词](docs/scr-word.png) | ![考前必背](docs/scr-recite.png) |
 
 ## 内容规模
 
@@ -101,7 +100,7 @@ python -m http.server 8080
 ├── icon.ico              六尺寸图标（16–256，桌面快捷方式用）
 ├── favicon.ico
 ├── icon-192.png / icon-512.png / apple-touch-icon.png
-├── docs/scr-*.png        四张使用界面截图（README 用）
+├── docs/*.png            五张界面截图（README 用：首页 + 四个功能页）
 └── README.md
 ```
 
